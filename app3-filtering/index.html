@@ -1,6 +1,19 @@
-<html>
-	<body>
+<html ng-app="filterApp">
+	<body ng-controller="filterCtrl">
+			<input placeholder="Search Name" ng-model="peepFilter.name">
+			<input placeholder="Search Email" ng-model="peepFilter.email">
+			<input placeholder="Search Date Employed" ng-model="peepFilter.dateEmployed">
+			<input placeholder="Search Phone Number" ng-model="peepFilter.phone">
+		<section ng-repeat="key in people | filter: peepFilter">
+				<div>Name: {{key.name}}</div>
+				<div>Email: {{key.email}}</div>
+				<div>Date Employed: {{key.dateEmployed}}</div>
+				<div>Phone: {{key.phone}}</div>
+				<hr>
+		</section>
+		
 		Something
+		<!-- {{test}} -->
 				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>

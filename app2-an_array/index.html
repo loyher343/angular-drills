@@ -3,8 +3,15 @@
 		<link rel="stylesheet" href="style.css"></link>
 	</head>
 	<body ng-controller="arrayController">
-	
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+		<!-- {{test}} -->
+		<section class="row" ng-repeat="peep in peeps">
+			<div> Name: {{peep.name}} </div> 				   <br>
+			<div> Email: {{peep.email}} </div>  			   <br>
+			<div> Date Employed: {{peep.dateEmployed}} </div>  <br>
+			<div> Phone: {{peep.phone}} </div>
+			<hr>
+		</section>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
 		<script src="service.js"></script>
